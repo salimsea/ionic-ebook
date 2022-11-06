@@ -1,0 +1,54 @@
+<ion-header>
+  <div class="header">
+    <div class="title">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <h1>Home</h1>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+  
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div>
+        <h1>E-Book Launching</h1>
+        <p>Aplikasi pertama yang menjual beli buku ilegal wkwk</p>
+      </div>
+      <div>
+        <img src="https://user-images.githubusercontent.com/49223890/199625296-5c827ba7-76ad-4935-835b-0b82fc75838f.png" alt="">
+      </div>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search">
+      <input type="text" placeholder="Pencarian E-Book....">
+    </div>
+
+
+    <!-- CONTENT -->
+    <div class="content">
+      <div *ngFor="let data of allData" class="item">
+        <img src="{{data.thumbnail}}" />
+        <div style="padding: 5px;">
+          <div class="badge">
+            <div class="best">Best Rating</div>
+            <ion-icon style="width:15px; height:15px;color:grey;" name="heart"></ion-icon>
+          </div>
+          <h5>{{data.name}}</h5>
+          <p>{{data.description}}</p>
+          <br />
+          <button class="btn-custom">Mulai Baca</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

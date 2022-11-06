@@ -1,0 +1,19 @@
+.versi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+    img {
+        width: 250px;
+        object-fit: contain;
+        margin-bottom: 80px;
+    }
+
+    h6 {
+        margin-top: 0px !important;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+    }
+}

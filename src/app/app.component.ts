@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { BacaPage } from './baca/baca.page';
+import { FavoritPage } from './favorit/favorit.page';
+import { HomePage } from './home/home.page';
+import { LokasiPage } from './lokasi/lokasi.page';
+import { VersiPage } from './versi/versi.page';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -6,13 +11,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Home', url: '/home', Component:HomePage, icon: 'home' },
+    { title: 'Favorit', url: '/favorit', Component:FavoritPage, icon: 'heart' },
+    { title: 'Baca Terbaru', url: '/baca', Component:BacaPage, icon: 'document' },
+    { title: 'Lokasi', url: '/lokasi', Component:LokasiPage, icon: 'navigate' },
+    { title: 'Versi', url: '/versi', Component:VersiPage, icon: 'information' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
 }

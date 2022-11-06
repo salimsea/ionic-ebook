@@ -1,0 +1,28 @@
+.hero {
+    background-color: #3880ff;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    h1 {
+        font-size: 14px;
+        font-weight: 600;
+        font-family: 'Poppins';
+        color: white;
+        margin-bottom: 5px !important;
+    }
+    p {
+        font-size: 10px;
+        font-weight: 500;
+        font-family: 'Poppins';
+        color: white;
+    }
+
+    img {
+        width: 150px;
+        object-fit: contain;
+    }
+}
+
